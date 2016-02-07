@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB4D0FB3-5529-4C5F-96DF-D196285DC6AF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>vProgram</RootNamespace>
+    <AssemblyName>vProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="CST">
+      <HintPath>C:\CST\dlls\CST.03626F77A130F0059CB7181FB59C13C166FE6FDB\CST.dll</HintPath>
+    </Reference>
+    <Reference Include="CST_Ops">
+      <HintPath>C:\CST\dlls\CST_Ops.B919D3B9D9AD6FEAC93410ED9C9B48928C920EDD\CST_Ops.dll</HintPath>
+    </Reference>
+    <Reference Include="Message">
+      <HintPath>C:\CST\dlls\Message.C56946C9FEA4E41195025F73D4CE83AB4A8D8C81\Message.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication">
+      <HintPath>C:\CST\dlls\Communication.34D1206CE3B73F48CF37E48B1E87C2828B74DEA6\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Server_C">
+      <HintPath>C:\CST\dlls\Server_C.8E4BDB0E0B90E886E384D4D94A8DFD58D9FF1370\Server_C.dll</HintPath>
+    </Reference>
+    <Reference Include="Server_B">
+      <HintPath>C:\CST\dlls\Server_B.C5D3F154AC32B273930F91C66871C2AFC2901830\Server_B.dll</HintPath>
+    </Reference>
+    <Reference Include="Server_A">
+      <HintPath>C:\CST\dlls\Server_A.E5D22FE2845024D253917FA57AFF11D35E605F03\Server_A.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assertion.cs">
+      <SubType></SubType>
+    </None>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SynthesizedPortion.cs" />
+    <None Include="Program.cs">
+      <SubType></SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

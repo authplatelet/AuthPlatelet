@@ -1,0 +1,35 @@
+﻿@model CILRepository.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+            @using (Html.BeginForm("MSLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Log in with Windows Live" class="btn btn-default" />
+                    </div>
+                </div>
+            }
+        </section>
+    @using (Html.BeginForm("MSLoginCallback", "Account", new { code = @Request["code"] }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        
+    }
+
+    </div>
+    <div class="col-md-4">
+        <section id="socialLoginForm">
+        </section>
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

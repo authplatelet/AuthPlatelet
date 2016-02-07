@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0B13682-A1ED-4EC4-B52C-7A5138104CD7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VProgram</RootNamespace>
+    <AssemblyName>VProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Communication">
+      <HintPath>C:\CST\dlls\Communication.681E79055893477D5507F66C194CF9233C6BBED0\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="CST">
+      <HintPath>C:\CST\dlls\CST.3DCCBE28D2B1F916504F6902E1998BFF0D8E8E25\CST.dll</HintPath>
+    </Reference>
+    <Reference Include="CST_Ops">
+      <HintPath>C:\CST\dlls\CST_Ops.82913E57B9F9F51C818C8928737BDEE61BCC612E\CST_Ops.dll</HintPath>
+    </Reference>
+    <Reference Include="OAuth20NameSpace">
+      <HintPath>C:\CST\dlls\OAuth20NameSpace.C44CDFA4F365A1E70AB32E8B9B713D4DFFB292D6\OAuth20NameSpace.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenIDConnectNameSpace">
+      <HintPath>C:\CST\dlls\OpenIDConnectNameSpace.9215C05EDA5BE0C8EAA270F6A283A042D5D36C35\OpenIDConnectNameSpace.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="CILRepository">
+      <HintPath>C:\CST\dlls\CILRepository.9E6189F500035628BC4B874A142071009F038249\CILRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericAuthNameSpace">
+      <HintPath>C:\CST\dlls\GenericAuthNameSpace.99EC82340BDFD3723BF4A6DE9525F4952C994671\GenericAuthNameSpace.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveID_IdP">
+      <HintPath>C:\CST\dlls\LiveID_IdP.515D78859B0C2CFE469F4955A74B49BD27E546A8\LiveID_IdP.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assertion.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SynthesizedPortion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

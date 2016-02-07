@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Token";
+}
+
+<h2>Token</h2>
+
+@if (Request.IsAuthenticated) {
+    <li>@Html.ActionLink("DownloadToken", "DownloadToken", "Account")</li>
+}

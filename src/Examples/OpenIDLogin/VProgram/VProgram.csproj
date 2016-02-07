@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27D37963-5778-40C6-B9D0-A58260FAAD22}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VProgram</RootNamespace>
+    <AssemblyName>VProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CST, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\CST.dll</HintPath>
+    </Reference>
+    <Reference Include="CST_Ops, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CST_Ops.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericAuthNameSpace, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\GenericAuthNameSpace.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenID20NameSpace, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\OpenID20NameSpace.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenIDExample, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OpenIDExample\bin\OpenIDExample.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo_IdP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\Yahoo_IdP.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="CST">
+      <HintPath>C:\CST\dlls\CST.69CD5E561321B6B75807E06EC6C2F332CF9900C8\CST.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericAuthNameSpace">
+      <HintPath>C:\CST\dlls\GenericAuthNameSpace.2FC02336332572BC4AEB9A7F10A4E92DBD289AE0\GenericAuthNameSpace.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenID20NameSpace">
+      <HintPath>C:\CST\dlls\OpenID20NameSpace.38351ABD98F3C224A800481C34B95B63154F19A4\OpenID20NameSpace.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo_IdP">
+      <HintPath>C:\CST\dlls\Yahoo_IdP.E260BE2857F81511CF69CD6E0507E31AC0B9835D\Yahoo_IdP.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenIDExample">
+      <HintPath>C:\CST\dlls\OpenIDExample.0A9663074E0A684369971F1FB18A737250C95876\OpenIDExample.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication">
+      <HintPath>C:\CST\dlls\Communication.D61A3780EE2BD7C61B8F55C8CD5344C69C2A15E9\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="CST_Ops">
+      <HintPath>C:\CST\dlls\CST_Ops.E902734C88054780D00FA7DE16D87D89B7C3F1C0\CST_Ops.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assertion.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SynthesizedPortion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

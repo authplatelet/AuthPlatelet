@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <script type="text/javascript">
+                function b_invoke() {
+
+                    xmlhttp = new XMLHttpRequest();
+
+                    xmlhttp.open("GET", "http://localhost:33107/A_invoke.aspx?Rand=" + Math.random(), false);
+                    xmlhttp.send();
+
+                    xmlDoc = xmlhttp.responseXML;
+                    var symT = xmlDoc.getElementsByTagName("SymT")[0].childNodes[0].nodeValue;
+                    var value = xmlDoc.getElementsByTagName("Value")[0].childNodes[0].nodeValue;
+                    var largestParty = xmlDoc.getElementsByTagName("LargestParty")[0].childNodes[0].nodeValue;
+                    var signedBy = xmlDoc.getElementsByTagName("SignedBy")[0].childNodes[0].nodeValue;
+
+                    var alertMsg = "SymT: " + symT + "\nValue: " + value + "\nLargestParty: " + largestParty + "\nSignedBy: " + signedBy;
+
+                    symT = "(" + symT + ")"
+                    alert(alertMsg);
+
+                    xmlhttp2 = new XMLHttpRequest();
+                    xmlhttp2.open("GET", "http://localhost:10892/B_invoke.aspx?SymT=" + symT + "&Value=" + value + "&LargestParty=" + largestParty + "&SignedBy=" + signedBy + "&Rand=" + Math.random(), false);
+                    xmlhttp2.send();
+
+                    xmlDoc2 = xmlhttp2.responseXML;
+                    var symT2 = xmlDoc2.getElementsByTagName("SymT")[0].childNodes[0].nodeValue;
+                    var value2 = xmlDoc2.getElementsByTagName("Value")[0].childNodes[0].nodeValue;
+                    var largestParty2 = xmlDoc2.getElementsByTagName("LargestParty")[0].childNodes[0].nodeValue;
+                    var signedBy2 = xmlDoc2.getElementsByTagName("SignedBy")[0].childNodes[0].nodeValue;
+
+                    var alertMsg2 = "SymT: " + symT2 + "\nValue: " + value2 + "\nLargestParty: " + largestParty2 + "\nSignedBy: " + signedBy2;
+
+                    symT2 = "(" + symT2 + ")"
+                    alert(alertMsg2);
+
+                    xmlhttp3 = new XMLHttpRequest();
+                    xmlhttp3.open("GET", "http://localhost:10931/C_invoke.aspx?SymT=" + symT2 + "&Value=" + value2 + "&LargestParty=" + largestParty2 + "&SignedBy=" + signedBy2 + "&Rand=" + Math.random(), false);
+                    xmlhttp3.send();
+
+                    xmlDoc3 = xmlhttp3.responseXML;
+                    var symT3 = xmlDoc3.getElementsByTagName("SymT")[0].childNodes[0].nodeValue;
+                    var value3 = xmlDoc3.getElementsByTagName("Value")[0].childNodes[0].nodeValue;
+                    var largestParty3 = xmlDoc3.getElementsByTagName("LargestParty")[0].childNodes[0].nodeValue;
+                    var signedBy3 = xmlDoc3.getElementsByTagName("SignedBy")[0].childNodes[0].nodeValue;
+                    var certified3 = xmlDoc3.getElementsByTagName("Certified")[0].childNodes[0].nodeValue;
+
+                    var alertMsg3 = "Certified: " + certified3 + "\nSymT: " + symT3 + "\nValue: " + value3 + "\nLargestParty: " + largestParty3 + "\nSignedBy: " + signedBy3;
+                    
+                    alert(alertMsg3);
+                }
+
+                window.onload = b_invoke;
+        </script>
+<!--                    alert("SymT = " + symT3 + " value = " + value3 + " largestParty = " + largestParty3 + " signedby = " + signedBy3);-->
+</head>
+<body>
+<!--    <script type="text/javascript" src="Run_ABC.js"></script>-->
+</body>
+</html>

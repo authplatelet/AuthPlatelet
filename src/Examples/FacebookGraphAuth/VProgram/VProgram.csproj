@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC05CF7C-F419-42B9-BD01-943AD0FA52E5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VProgram</RootNamespace>
+    <AssemblyName>VProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="CST">
+      <HintPath>C:\CST\dlls\CST.2C36D0B7ED6555F90B42B6FEA8427225ECB6CA46\CST.dll</HintPath>
+    </Reference>
+    <Reference Include="CST_Ops">
+      <HintPath>C:\CST\dlls\CST_Ops.EE3CE7119A4DAEF240EC02C9964D37EF3032500F\CST_Ops.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericAuthNameSpace">
+      <HintPath>C:\CST\dlls\GenericAuthNameSpace.999182DDC811AA92C8BA59B7C2A32B3880F6A0D3\GenericAuthNameSpace.dll</HintPath>
+    </Reference>
+    <Reference Include="OAuth20NameSpace">
+      <HintPath>C:\CST\dlls\OAuth20NameSpace.7A610F71630C939C8B29D00BF72D4521727E4E15\OAuth20NameSpace.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook_AP">
+      <HintPath>C:\CST\dlls\Facebook_AP.9F2A9761C8E96FBF768B9E23C9EDFDF4ED41A10B\Facebook_AP.dll</HintPath>
+    </Reference>
+    <Reference Include="FacebookGraphApiExample">
+      <HintPath>C:\CST\dlls\FacebookGraphApiExample.94EE7A201FA27BFAE0F06618B5D7CA83F65E8D67\FacebookGraphApiExample.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assertion.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SynthesizedPortion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

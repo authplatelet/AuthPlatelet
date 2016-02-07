@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CST-enhanced Live Connect Relying Party Implementation</title>
+    <style>
+        <!--
+        .Name
+        {
+            font-family: 'Segoe UI', Verdana, Tahoma, Helvetica, Arial, sans-serif;
+            font-weight: bold;
+        }
+        -->
+    </style>	
+</head>
+<body>
+<h1>CST-enhanced Live Connect Relying Party Implementation</h1>
+<div>
+  <div id="signin"></div>
+</div>
+<script src="//js.live.net/v5.0/wl.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript" language="javascript">
+
+    var client_id = "000000004C108D95",
+        scope = [/*"wl.signin", */"wl.basic", "wl.offline_access"],
+//        redirect_uri = "http://a.local.host:54432/Website/login.aspx";
+        redirect_uri = "http://a.local.host:14022/login.aspx";
+
+
+    WL.init({ client_id: client_id, redirect_uri: redirect_uri, response_type: "code" });
+
+    WL.ui({ name: "signin", element: "signin" });
+   
+</script>
+</p><br /><button onclick="window.open('displayUserID.aspx?r='+Math.random())">See UserID</button>
+
+</body>
+</html>
